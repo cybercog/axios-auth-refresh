@@ -84,7 +84,7 @@ export default function createAuthRefreshInterceptor(
             })
             .then(() => {
                 error.config.skipAuthRefresh = true;
-                return axios(error.response.config);
+                return instance(error.response.config);
             });
     });
 }
